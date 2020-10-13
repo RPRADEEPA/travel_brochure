@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">KODAIKANAL<span class="logo_colour">TRAVEL GUIDE</span></a></h1>
+          <h2></h2>
+		  <h5> <script type="text/javascript" src="current.js">
+	   </script></h5>
+        
+        </div>
+		
+      </div>
+	  		 
+      <div id="menubar">
+        <ul id="menu">
+
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">ABOUT</a></li>
+          <li><a href="news.html">ATTRACTIONS</a></li>
+          <li><a href="read.html">ROUTE</a></li>
+           <li><a href="fac.html">SUGGESTIONS</a></li>
+	 <li ><a href="topics.html">HOTELS</a></li>
+<li class="selected"><a href="event.html">WHEATHER</a></li>
+	<li><a href="visit.html">RECENT VIEWS</a></li>
+		  </ul>
+      </div>
+    </div>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<button ng-click="myFunc()">Current day!</button>
+
+<div ng-show="showMe">
+    <img src="w1.jpg" width="300" height ="400"></img>
+</div>
+</div>
+<div>
+<img src="w2.jpg" width="300" height ="400" float:"center"></img></div>
+<div><a href="https://www.nativeplanet.com/kodaikanal/weather/" style="font-size:20px;">View Kodaikanal Wheather Forecast</a>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.showMe = false;
+    $scope.myFunc = function() {
+        $scope.showMe = !$scope.showMe;
+    }
+});
+</script>
+
+</body>
+</html>

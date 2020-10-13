@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app='ControllerAsApp'>
+  <head>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="fac.js"></script>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <title>USE OF Factory</title>
+  </head>
+  <body>
+     <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+		
+          <h1><a href="index.html">KODAIKANAL<span class="logo_colour">TRAVEL GUIDE</span></a></h1>
+         
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">ABOUT</a></li>
+          <li><a href="news.html">ATTRACTIONS</a></li>
+          <li><a href="read.html">ROUTE</a></li>
+<li class="selected"><a href="fac.html">SUGGESTIONS</a></li>
+		 <li><a href="topics.html">HOTELS</a></li>
+<li ><a href="event.html">WHEATHER</a></li>
+		  		  <li ><a href="visit.html">RECENT VIEWS</a></li>
+				   
+        </ul>
+      </div>
+    </div>
+		
+		
+    <h1 style="color:white;">YOUR SUGGESTION ON PLACES TO INCLUDE</h1>
+	</div>
+</div>
+</div>
+</div>
+    <div id="list2" ng-controller='Newslist2 as list2'>
+      <h3 style="color:white;">Only 4 suggestions are allowed</h3>
+      
+      <input type="text" ng-model="list2.newshead" placeholder="places">
+      <button ng-click="list2.addItem();">Add suggestion</button>
+      <ol>
+        <li ng-repeat="item in list2.items">
+          {{ item.newshead }} 
+          <button ng-click="list2.removeItem($index);">Remove suggestion</button>
+		  
+        </li>
+		      
+      </ol>
+      <div class="error" style="color:blue;" text-align ="center"> {{list2.errorMessage}}</div></p>
+    </div>
+
+  </body>
+</html>

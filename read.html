@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>World's Online News/Magazine Portal</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <title>built in directive</title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">KODAIKANAL<span class="logo_colour">TRAVEL GUIDE</span></a></h1>
+         
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">ABOUT</a></li>
+          <li><a href="news.html">ATTRACTIONS</a></li>
+          <li class="selected"><a href="read.html">ROUTE</a></li>
+          <li><a href="fac.html">SUGGESTIONS</a></li>
+		  <li ><a href="topics.html">HOTELS</a></li>
+<li ><a href="event.html">WHEATHER</a></li>
+		  <li><a href="visit.html">RECENT VIEWS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>MORE</h3>
+            <h4>directions</h4>
+			<a href="https://www.google.co.in/maps">Visit site</a>
+           
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1 style="color:white;">HOW TO REACH </h1><br><br><br><br>
+<p>
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="event.js"></script>
+
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<button ng-click="myFunc()" >Transportation!</button> 
+
+<div ng-show="showMe">
+    <img src="E:\WTASSGN\style\Capture.jpg" width="700" height ="400"></img>
+</div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      
+      <p>contact detail :- Kodai@gmail.com </p>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
